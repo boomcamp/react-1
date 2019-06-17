@@ -10,13 +10,20 @@ export default function EvenAndOdd(){
         function solve(userInput){
            try {
                let nums = userInput.split(',');
-               let num  = 0;
+               let num = 0;
                for(num of nums){
-                   num%2===0 ? evens.push(num) : odds.push(num);
+                 
+                  if(num === ''){
+                      odds.push("null");
+                  }
+                  else {
+                      num%2===0 ? odds.push(num) : evens.push(num);
+                  }
+                   
                }
 
-               setOddsy(odds.join(','));
-               setEvensy(evens.join(','));
+               setOddsy(evens.join(','));
+               setEvensy(odds.join(','));
 
                
            }
