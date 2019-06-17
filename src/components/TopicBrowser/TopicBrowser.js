@@ -3,7 +3,7 @@ import EvenAndOdd from '../Topics/EvenAndOdd';
 import FilterObject from '../Topics/FilterObject';
 import FilterString from '../Topics/FilterString';
 import Palindrome from '../Topics/Palindrome';
-import sum from '../Topics/Sum';
+import Sum from '../Topics/Sum';
 
 function TopicBrowser() {
     return (
@@ -12,6 +12,7 @@ function TopicBrowser() {
             <FilterObject />
             <FilterString />
             <Palindrome />
+            <Sum />
         </React.Fragment> 
     )
 }
