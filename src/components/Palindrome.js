@@ -6,9 +6,13 @@ export default function Palindrome() {
 
   function checkPalindrome(word) {
     const normalizedWord = word.toLowerCase();
-    const reversedWord = normalizedWord.split('').reverse().join('');
+    const reversedWord = normalizedWord
+      .split('')
+      .reverse()
+      .join('');
     setAnswer(normalizedWord === reversedWord);
   }
+
   return (
     <div className="puzzleBox palindromePB">
       <h4>Palindrome</h4>
