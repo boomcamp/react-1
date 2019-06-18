@@ -13,9 +13,9 @@ export default function Sum() {
   return (
     <div className="puzzleBox sumPB">
         <h4> Sum </h4>
-        <input className="inputLine"></input>
-        <button className="confirmationButton"> Add </button>
-        <span className="resultsBox"></span>
+        <input onChange={e=>setInput(e.target.value)} className="inputLine"></input>
+        <button onClick={()=>sum(input)} className="confirmationButton"> Add </button>
+        <span className="resultsBox">{result}</span>
     </div>
   )
 }
