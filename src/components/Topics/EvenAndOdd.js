@@ -1,7 +1,36 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 export default function EvenAndOdd() {
+  const [evens, setEvens] = useState([]);
+  const [odds, setOdds] = useState([]);
+  const [userInput, setUserInput] = useState('');
+
+  function solve(userInput) {
+    const results = {
+      evens: [],
+      odds: [],
+    }
+
+    for (let val of userInput.split(',').map(digit => parseInt(digit))) {
+      if (val%2 == 0) {
+        results.evens.push(val);
+      } else {
+        results.odds.push(val);
+      }
+
+      setEvens(results.evens);
+      setOdds(results.odds);
+    }
+  }
+
+
   return (
-    <p>EvenAnddOdd</p>
+    <div className="puzzleBox evenAndOddPB">
+      <h4>Evens and Odds</h4>
+      <input className="inputLine" onChange={event => setUserInput(event.target.value)}></input>
+      <button className="confirmationButton" onClick={() => solve(userInput)}>Split</button>
+      <span className="resultsBox">Evens: {JSON.stringify(evens)}</span>
+      <span className="resultsBox">Odds: {JSON.stringify(odds)}</span>
+    </div>
   )
 }
