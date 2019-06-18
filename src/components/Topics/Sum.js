@@ -4,18 +4,13 @@ export default function Sum() {
   const [userInput, setUserInput] = useState('');
   const [sum, setSum] = useState();
 
-  function getSum(input) {
-    const sum = input
-      .split(',')
-      .map(n => parseInt(n))
-      .reduce((acc, n) => {
-        acc += n;
-        return acc;
-      }, 0);
-
-    setSum(sum);
-  }
-
+ 
+  function getSum(str){
+    var sum = 0;
+    var arr = str.split(',');
+    arr.forEach(x => sum += parseInt(x))
+    setSum(sum)
+}
   return (
     <div className="puzzleBox sumPB">
       <h4>Sum</h4>

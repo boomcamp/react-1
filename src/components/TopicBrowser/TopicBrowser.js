@@ -6,6 +6,7 @@ import FilterObject from '../Topics/FilterObject'
 import FilterString from '../Topics/FilterString'
 import Palindrome from '../Topics/Palindrome'
 import Sum from '../Topics/Sum'
+import VowelCounter from '../Topics/VowelCounter'
 
 export default function TopicBrowser() {
     return (
@@ -15,6 +16,7 @@ export default function TopicBrowser() {
         <FilterString />
         <Palindrome />
         <Sum />
+        <VowelCounter />
         </React.Fragment>
     )
   }

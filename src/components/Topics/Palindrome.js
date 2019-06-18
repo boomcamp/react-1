@@ -4,13 +4,11 @@ export default function Palindrome() {
   const [userInput, setUserInput] = useState('');
   const [answer, setAnswer] = useState('Enter a word to check');
 
-  function checkPalindrome(word) {
-    const normalizedWord = word.toLowerCase();
-    const reversedWord = normalizedWord
-      .split('')
-      .reverse()
-      .join('');
-    setAnswer(normalizedWord === reversedWord);
+  function isPalindrome(str) {
+    var re = /[\W_]/g;
+    var lowRegStr = str.toLowerCase().replace(re, '');
+    var reverseStr = lowRegStr.split('').reverse().join(''); 
+    setAnswer(reverseStr === lowRegStr)
   }
 
   return (
@@ -22,7 +20,7 @@ export default function Palindrome() {
       />
       <button
         className="confirmationButton"
-        onClick={() => checkPalindrome(userInput)}
+        onClick={() => isPalindrome(userInput)}
       >
         Check
       </button>
