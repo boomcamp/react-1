@@ -10,7 +10,7 @@ export default function FilterObject() {
     const [userInput, setUserInput] = useState('');
 
     function filter(input) {
-        const filteredArray = unFilteredArray.filter(arr => {
+        const filtered = unFilteredArray.filter(arr => {
             if(arr[input]) {
                 return true;
             }
@@ -18,7 +18,7 @@ export default function FilterObject() {
                 return false;
             }
         });
-        setFilteredArray(filteredArray);
+        setFilteredArray(filtered);
     }
         
     return (
@@ -27,7 +27,7 @@ export default function FilterObject() {
             <h4>Filter Object</h4>
             <input className="inputLine" onChange={e => setUserInput(e.target.value)} />
             <button className="confirmationButton" onClick={() => filter(userInput)}>Filter</button>
-            <span className="resultsBox filterObjectRB">Filtered: { JSON.stringify(unFilteredArray, null, 10)}</span>
+            <span className="resultsBox filterObjectRB">Filtered: { JSON.stringify(filteredArray, null, 10)}</span>
         </div>
     );
 
