@@ -16,13 +16,14 @@ export default class Palindrome extends Component {
   }
 
   isPalindrome(userInput) {
-    var newString = [];
+    var string = userInput
+    var newString = []
 
-    for(i=userInput.length-1; i >= 0; i--){
-      newString.push(userInput[i]);
+    for(var i=userInput.length-1; i >= 0; i--){
+      newString.push(string[i]);
     }
 
-    if(str === newString.join('')){
+    if(string=== newString.join('')){
       this.setState({ palindrome: 'true' });
     }else{
       this.setState({ palindrome: 'false' });

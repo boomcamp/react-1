@@ -6,18 +6,18 @@ export default class Sum extends Component {
     super();
 
     this.state = {
-      number1: 0,
-      number2: 0,
+      num1: 0,
+      num2: 0,
       sum: null
     }
   }
 
   updateNumber1(val) {
-    this.setState({ number1: parseInt(val, 10) });
+    this.setState({ num1: parseInt(val) });
   }
 
   updateNumber2(val) {
-    this.setState({ number2: parseInt(val, 10) });
+    this.setState({ num2: parseInt(val) });
   }
 
   add(num1, num2) {
@@ -30,7 +30,7 @@ export default class Sum extends Component {
         <h4> Sum </h4>
         <input className="inputLine" type="number" onChange={ (e) => this.updateNumber1(e.target.value) }></input>
         <input className="inputLine" type="number" onChange={ (e) => this.updateNumber2(e.target.value) }></input>
-        <button className="confirmationButton" onClick={ () => this.add(this.state.number1, this.state.number2) }> Add </button>
+        <button className="confirmationButton" onClick={ () => this.add(this.state.num1, this.state.num2) }> Add </button>
         <span className="resultsBox"> Sum: {this.state.sum} </span>
       </div>
     )
