@@ -1,16 +1,7 @@
 import React, {useState} from 'react';
 
 export default function FilterString() {
-    const [names, setNames] = useState([
-        'James',
-        'Jessica',
-        'Melody',
-        'Tyler',
-        'Blake',
-        'Jennifer',
-        'Mark',
-        'Maddy',
-      ]);
+    const [names, setNames] = useState(['James','Jessica','Melody','Tyler','Blake','Jennifer','Mark','Maddy']);
       const [filteredNames, setFilteredNames] = useState([]);
       const [userInput, setUserInput] = useState('');
 
