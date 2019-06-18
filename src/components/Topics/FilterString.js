@@ -16,9 +16,7 @@ export default function FilterString(){
 
     function filterNames(string) {
         const regex = new RegExp(string,'g')
-        setFilteredNames(
-            names.filter(name => regex.test(name))
-        )
+        setFilteredNames(names.filter(name => regex.test(name)))
     }
 
     return (
