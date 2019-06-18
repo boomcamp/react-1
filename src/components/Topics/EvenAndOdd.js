@@ -23,14 +23,13 @@ export default function EvenAndOdd() {
     }
   }
 
-
   return (
     <div className="puzzleBox evenAndOddPB">
       <h4>Evens and Odds</h4>
       <input className="inputLine" onChange={event => setUserInput(event.target.value)}></input>
       <button className="confirmationButton" onClick={() => solve(userInput)}>Split</button>
-      <span className="resultsBox">Evens: {JSON.stringify(evens)}</span>
-      <span className="resultsBox">Odds: {JSON.stringify(odds)}</span>
+      <span className="resultsBox">Evens: {JSON.stringify(evens, null, 1)}</span>
+      <span className="resultsBox">Odds: {JSON.stringify(odds, null, 1)}</span>
     </div>
   )
 }
