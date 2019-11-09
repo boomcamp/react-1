@@ -1,20 +1,18 @@
 import React, {useState} from 'react';
 
 export default function EvenAndOdd(){
-    const [evens, setEvens] = useState([]);
-    const [odds, setOdds] = useState([]);
+    var [evens, setEvens] = useState([]);
+    var [odds, setOdds] = useState([]);
     const [userInput, setUserInput] = useState([]);
 
     function solve(input){
-        const result ={
-            evens: [],
-            odds: []
-        }
-        let new_input = input.split(',')
-        let parsed_input = new_input.map(x=> parseInt(x))
-        (parsed_input % 2 === -1)?result.odds.push(parsed_input):result.evens.push(parsed_input)
-        setOdds(result.odds);
-        setEvens(result.evens);
+        evens = [];
+        odds = [];
+        input.split(',').map(x=> 
+            (parseInt(x) % 2 === 0)?evens.push(parseInt(x)):odds.push(parseInt(x))          
+        )
+        setOdds(odds);
+        setEvens(evens);
     }
     return(
         <div className="puzzleBox evenAndOddPB">
