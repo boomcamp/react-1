@@ -5,9 +5,9 @@ export default function Sum() {
   const [userInput, setUserInput] = useState("");
   function Add(input) {
     let add = 0;
-    const val = input.split("+");
+    const val = input.split(",");
     val.forEach(n => (add += parseInt(n)));
-    setsum(add);
+    setsum(add);                                                                                            
   }
   return (
     <div className="puzzleBox sumPB">

@@ -30,7 +30,7 @@ body {
   margin-right: 0px;
 }
 
-.evenAndOddPB {
+.evenAndOddPB, .sumPB, .vrPB, .PigLPB {
   height: 270px;
 }
 
@@ -44,10 +44,6 @@ body {
 
 .palindromePB {
   height: 225px;
-}
-
-.sumPB {
-  height: 270px;
 }
 
 .resultsBox {
