@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 export default function Palindrome(){
     const [ userInput, setUserInput ] = useState('');
-    const [ word, setWord ] = useState();
+    const [ word, setWord ] = useState("Enter word to check");
 
     function palindrome(str) {
         var re = /[^A-Za-z0-9]/g;

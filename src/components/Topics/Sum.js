@@ -7,8 +7,8 @@ export default function Sum(){
     function add(input){
         var num = input.toString().split(',');
         var result = 0;
-        for(let val in num){
-          result += Number(num[val])
+        for(let val of num){
+          result += Number(val)
         }     
          setSum(result);
       }
