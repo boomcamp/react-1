@@ -3,8 +3,8 @@ export default function Sum() {
     const [userInput, setUserInput] = useState("");
     const [string, setstring] = useState("");
 function pigit(input){
-  input.split(' ').map(word => {
-    let [first, ...rest] = word.split('')
+  setstring(input.split(' ').map(word => {
+    const [first, ...rest] = word.split('')
     if(/[aeiou]+/gi.test(first)){
       word = word + 'way'
     }
@@ -12,8 +12,8 @@ function pigit(input){
     {
       word = rest.join('') + first + 'ay'
     }
-   setstring(word)
-  }).join(' ')
+    return word
+  }).join(' '))
 }
     return (
         <div className="puzzleBox PigLPB">
