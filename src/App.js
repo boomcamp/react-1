@@ -1,8 +1,12 @@
-import React from 'react';
+import React,{Component} from 'react';
 import './index.css';
 
-function App() {
-  return null;
+import TopicBrowser from './components/TopicBrowser/TopicBrowser'
+class App extends Component{
+  render(){
+  return (
+    <TopicBrowser />
+  )
+  }
 }
-
 export default App;
