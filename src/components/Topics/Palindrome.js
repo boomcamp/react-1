@@ -5,9 +5,10 @@ export default function Palindrome() {
    const [userInput, setUserInput] = useState("");
 
    function palindrome(word) {
+      var str = word.replace(/[^a-zA-Z0-9]+/gi, "").toLowerCase();
       if (
-         word ===
-         word
+         str ===
+         str
             .split("")
             .reverse()
             .join("")
