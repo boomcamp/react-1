@@ -1,0 +1,35 @@
+import React,{useState} from 'react'
+
+function EvenandOdd(){
+   const [odds, setOdds] = useState([])
+   const [evens, setEvens] = useState([])
+   const [userInput, setUserInput] = useState('')
+   
+   function solve(input){
+        const results = {
+            evens: [],
+            odds: [],
+        }
+        for (let val of input.split(',').map(v => parseInt(v))) {
+            if (val % 2 === 0) {
+                results.evens.push(val);
+            } else {
+                results.odds.push(val);
+            }
+        }
+    
+        setEvens(results.evens);
+        setOdds(results.odds);
+        setUserInput('');
+   }
+    return(
+        <div className="puzzleBox evenAndOddPB">
+            <h4>Evens and Odds</h4>
+            <input type="text" placeholder="Please add comma(,)" className="inputLine" value={userInput} onChange={e => setUserInput(e.target.value)}/>
+            <button className="confirmationButton" onClick={() => solve(userInput)}>Split</button>
+            <span className="resultsBox">Evens: {JSON.stringify(evens)}</span>
+            <span className="resultsBox">Odds: {JSON.stringify(odds)}</span>    
+        </div>
+    )   
+}
+export default EvenandOdd;
