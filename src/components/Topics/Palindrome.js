@@ -5,12 +5,13 @@ export default function Palindrome() {
   const [check, setCheck] = useState("Enter a word to check");
 
   function palindrome(input) {
-    var t = input.toLowerCase();
-    var x = t.split("");
-    var y = x.reverse();
-    var z = y.join("");
-    var regExp = z.replace(/[\W_]/gi, "");
-    setCheck(regExp === input);
+    var word = input
+      .toLowerCase()
+      .split("")
+      .reverse()
+      .join("")
+      .replace(/[\W_]/gi, "");
+    setCheck(word === input);
   }
 
   return (
