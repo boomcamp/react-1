@@ -6,8 +6,8 @@ export default function Product() {
 
     function multiplying(input) {
         let res = 0;
-        input.split(',').map(data => res *= parseInt(data))
-        setResult(res)
+        input.split(',').map(data => res = (parseInt(data[0]) * parseInt(data[1])));
+        setResult(res);
     }
 
     return (
