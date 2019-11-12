@@ -2,12 +2,12 @@ import React, { useState } from "react";
 
 export default function Sum() {
     const [userInput, setUserInput] = useState("");
+    const [result, setResult] = useState("");
 
-    function adding(a, b) {
-        let result;
-        if (String) {
-            return null;
-        }
+    function adding(input) {
+        let res = 0;
+        input.split(',').map(data => res += parseInt(data))
+        setResult(res)
     }
 
     return (
@@ -20,7 +20,7 @@ export default function Sum() {
             <button onClick={() => adding(userInput)} className="confirmationButton">
                 Add
       </button>
-            <span className="resultsBox"></span>
+            <span className="resultsBox">{result}</span>
         </div>
     );
 }
