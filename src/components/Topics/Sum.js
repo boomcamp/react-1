@@ -8,6 +8,7 @@ export default function Sum() {
         let res = 0;
         input.split(',').map(data => res += parseInt(data))
         setResult(res)
+        console.log(res);
     }
 
     return (

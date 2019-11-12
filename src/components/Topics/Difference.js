@@ -7,7 +7,7 @@ export default function Difference() {
     function subtracting(input) {
         let res = 0;
         input.split(',').map(data => res -= parseInt(data))
-        setResult(res)
+        setResult(res);
     }
 
     return (
