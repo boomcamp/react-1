@@ -5,9 +5,10 @@ export default function Product() {
     const [result, setResult] = useState("");
 
     function multiplying(input) {
-        let res = 0;
-        input.split(',').map(data => res = parseInt(data[0]) * parseInt(data[1]))
-        setResult(res)
+        var prod = input.toString().split(',').map(Number).reduce(function (a, b) {
+            return a * b;
+        })
+        setResult(prod)
     }
 
     return (

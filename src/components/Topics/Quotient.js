@@ -5,9 +5,10 @@ export default function Quotient() {
     const [result, setResult] = useState("");
 
     function dividing(input) {
-        let res = 0;
-        input.split(',').map(data => res /= parseInt(data))
-        setResult(res)
+        var quo = input.toString().split(',').map(Number).reduce(function (a, b) {
+            return a / b;
+        })
+        setResult(quo)
     }
 
     return (

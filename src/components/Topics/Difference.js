@@ -5,9 +5,10 @@ export default function Difference() {
     const [result, setResult] = useState("");
 
     function subtracting(input) {
-        let res = 0;
-        input.split(',').map(data => res -= parseInt(data))
-        setResult(res);
+        var dif = input.toString().split(',').map(Number).reduce(function (a, b) {
+            return a - b;
+        })
+        setResult(dif)
     }
 
     return (
