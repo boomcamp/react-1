@@ -1,43 +1,41 @@
 import React, { useState } from "react";
 
 export default function FilterObject() {
-  const [unFilteredArray, setUnFilteredArray] = useState([
-    { name: "John", title: "Junior Developer", age: 20 },
-    { name: "Bob", title: "Development Manager", age: 32, yearsEmployed: 2 },
-    { name: "Lisa", title: "Senior Developer" }
-  ]);
-  const [filteredArray, setFilteredArray] = useState([]);
-  const [userInput, setUserInput] = useState("");
+    const [unFilteredArray, setUnFilteredArray] = useState([
+        { name: "John", title: "Junior Developer", age: 20 },
+        { name: "Bob", title: "Development Manager", age: 32, yearsEmployed: 2 },
+        { name: "Lisa", title: "Senior Developer" }
+    ]);
+    const [filteredArray, setFilteredArray] = useState([]);
+    const [userInput, setUserInput] = useState("");
 
-  function filter(input) {
-    const filtered = unFilteredArray.filter(o => {
-      if (o[input]) {
-        return true;
-      }
+    function filter(input) {
+        const filtered = unFilteredArray.filter(o => {
+            if (o[input]) {
+                return true;
+            }
+            return false;
+        });
+        setFilteredArray(filtered);
+    }
 
-      return false;
-    });
-
-    setFilteredArray(filtered);
-  }
-
-  return (
-    <div className="puzzleBox filterObjectPB">
-      <h4>Filter Object</h4>
-      <span className="puzzleText">
-        Original:
+    return (
+        <div className="puzzleBox filterObjectPB">
+            <h4>Filter Object</h4>
+            <span className="puzzleText">
+                Original:
         {JSON.stringify(unFilteredArray, null, 10)}
-      </span>
-      <input
-        className="inputLine"
-        onChange={e => setUserInput(e.target.value)}
-      />
-      <button oncClick={() => filter(userInput)} className="confirmationButton">
-        Filter
+            </span>
+            <input
+                className="inputLine"
+                onChange={e => setUserInput(e.target.value)}
+            ></input>
+            <button oncClick={() => filter(userInput)} className="confirmationButton">
+                Filter
       </button>
-      <span className="resultsBox filterObjectRB">
-        Filtered: {JSON.stringify(filteredArray, null, 10)}
-      </span>
-    </div>
-  );
+            <span className="resultsBox filterObjectRB">
+                Filtered: {JSON.stringify(filteredArray, null, 10)}
+            </span>
+        </div>
+    );
 }
