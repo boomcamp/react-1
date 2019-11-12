@@ -14,7 +14,7 @@ export default function Palindrome() {
 
     return (
         <div className="puzzleBox palindromePB">
-            <h4>Palindrome</h4>
+            <h4>Palindrome (Single Word)</h4>
             <input
                 className="inputLine"
                 onChange={e => setUserInput(e.target.value)}

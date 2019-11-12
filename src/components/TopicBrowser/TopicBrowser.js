@@ -5,6 +5,9 @@ import FilterObject from "../Topics/FilterObject";
 import FilterString from "../Topics/FilterString";
 import Palindrome from "../Topics/Palindrome";
 import Sum from "../Topics/Sum";
+import Product from "../Topics/Product";
+import Quotient from "../Topics/Divide"
+import Difference from "../Topics/Difference"
 
 export default function TopicBrowser() {
   return (
@@ -14,6 +17,9 @@ export default function TopicBrowser() {
       <FilterString />
       <Palindrome />
       <Sum />
+      <Product />
+      <Quotient />
+      <Difference />
     </React.Fragment>
   );
 }

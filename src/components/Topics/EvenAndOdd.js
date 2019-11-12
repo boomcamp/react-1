@@ -31,8 +31,8 @@ export default function EvenAndOdd() {
             <button onClick={() => solve(userInput)} className="confirmationButton">
                 Split
       </button>
-            <span className="resultsBox">Evens: [{evens}]</span>
-            <span className="resultsBox">Odds: [{odds}]</span>
+            <span className="resultsBox">Evens: {JSON.stringify(evens)}</span>
+            <span className="resultsBox">Odds: {JSON.stringify(odds)}</span>
         </div>
     );
 }

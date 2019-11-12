@@ -30,7 +30,7 @@ export default function FilterObject() {
                 className="inputLine"
                 onChange={e => setUserInput(e.target.value)}
             ></input>
-            <button oncClick={() => filter(userInput)} className="confirmationButton">
+            <button onClick={() => filter(userInput)} className="confirmationButton">
                 Filter
       </button>
             <span className="resultsBox filterObjectRB">
