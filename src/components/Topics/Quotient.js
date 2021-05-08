@@ -1,25 +1,25 @@
 import React, { useState } from "react";
 
-export default function Sum() {
+export default function Quotient() {
     const [userInput, setUserInput] = useState("");
     const [result, setResult] = useState("");
 
-    function adding(input) {
-        let res = 0;
-        input.split(',').map(data => res += parseInt(data))
-        setResult(res)
-        console.log(res);
+    function dividing(input) {
+        var quo = input.toString().split(',').map(Number).reduce(function (a, b) {
+            return a / b;
+        })
+        setResult(quo)
     }
 
     return (
         <div className="puzzleBox sumPB">
-            <h4>Sum</h4>
+            <h4>Divide</h4>
             <input
                 className="inputLine"
                 onChange={e => setUserInput(e.target.value)}
             ></input>
-            <button onClick={() => adding(userInput)} className="confirmationButton">
-                Add
+            <button onClick={() => dividing(userInput)} className="confirmationButton">
+                Divide
       </button>
             <span className="resultsBox">{result}</span>
         </div>
