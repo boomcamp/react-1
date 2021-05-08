@@ -47,9 +47,17 @@ body {
 }
 
 .sumPB {
-  height: 270px;
+  height: 230px;
 }
-
+.foldsPB{
+  height: 230px;
+}
+.phonePB {
+  height: 230px;
+}
+.camelPB{
+  height: 230px;
+}
 .resultsBox {
   width: 360px;
   height: 20px;
